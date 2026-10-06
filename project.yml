@@ -1,0 +1,30 @@
+name: ProxyRules
+options:
+  bundleIdPrefix: com.hajto
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+
+targets:
+  ProxyRules:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hajto.ProxyRules
+        SWIFT_VERSION: "5.9"
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        ENABLE_HARDENED_RUNTIME: YES
+    info:
+      path: Info.plist
+      properties:
+        CFBundleName: ProxyRules
+        CFBundleDisplayName: ProxyRules
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        NSHumanReadableCopyright: ""
+        LSMinimumSystemVersion: "13.0"
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
