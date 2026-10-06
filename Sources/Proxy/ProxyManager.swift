@@ -78,10 +78,8 @@ final class ProxyManager {
 
     private func networkServices() -> [String] {
         let out = output("/usr/sbin/networksetup", "-listallnetworkservices")
-        return out.components(separatedBy: "\n")
-            .dropFirst() // first line is "An asterisk (*) denotes..."
-            .filter { !$0.isEmpty }
-            .map(String.init)
+        let lines = out.components(separatedBy: "\n")
+        return lines.count > 1 ? Array(lines[1...]).filter { !$0.isEmpty } : []
     }
 
     private func promptCertIfNeeded() {

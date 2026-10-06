@@ -51,7 +51,7 @@ struct RuleDetailView: View {
                                 .font(.body)
                         }
                         .buttonStyle(.plain)
-                        .foregroundStyle(.accent)
+                        .foregroundStyle(Color.accentColor)
                     }
                     .padding(20)
 
@@ -107,7 +107,7 @@ struct RuleDetailView: View {
                                 .font(.body)
                         }
                         .buttonStyle(.plain)
-                        .foregroundStyle(.accent)
+                        .foregroundStyle(Color.accentColor)
                     }
                     .padding(20)
                 }
